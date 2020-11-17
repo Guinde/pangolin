@@ -1,0 +1,32 @@
+<header>
+  <div class="container-logo">
+    <a href="#" class="logo">Pangolin</a>
+  </div>
+  <nav>
+    <ul>
+      <div class="tab" *ngIf="!jwtToken.isAuthenticated">
+        <li>
+          <a href="#" routerLink="/signin" routerLinkActive="active-link"
+            >SignIn</a
+          >
+        </li>
+        <li>
+          <a href="#" routerLink="/signup" routerLinkActive="active-link"
+            >SignUp</a
+          >
+        </li>
+      </div>
+      <div class="tab" *ngIf="jwtToken.isAuthenticated">
+        <li>
+          <a
+            href="#"
+            routerLink="/signin"
+            routerLinkActive="active-link"
+            (click)="signout()"
+            >Signout</a
+          >
+        </li>
+      </div>
+    </ul>
+  </nav>
+</header>

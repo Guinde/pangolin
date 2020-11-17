@@ -1,0 +1,11 @@
+<div class="container-form">
+  <h2>Edit Profile</h2>
+  <app-form-pangolin
+    [formData]="form"
+    (submit)="onSubmit($event)"
+    [sizeForm]="'300px'"
+    [editForm]="true"
+    [nourritureItems]="currentPangolin.nourriture"
+    (close)="closeForm()"
+  ></app-form-pangolin>
+</div>

@@ -1,0 +1,15 @@
+.container-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 85vh;
+  h2 {
+    margin-bottom: 20px;
+  }
+  form {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+  }
+}

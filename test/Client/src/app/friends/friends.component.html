@@ -1,0 +1,23 @@
+<div *ngIf="friends" class="container-friends">
+  <ul class="list-group">
+    <li class="list-group-item active">My Friends</li>
+    <li *ngFor="let friend of friends; let i = index" class="list-group-item">
+      <div class="d-flex flex-row justify-content-between align-items-center">
+        <div class="d-flex flex-column">
+          <span> {{ friend.login }} </span>
+          <span> ({{ friend.age }} ans) </span>
+        </div>
+        <div class="d-flex flex-column">
+          <span> {{ friend.famille }} </span>
+          <span> {{ friend.race }} </span>
+        </div>
+        <button class="btn btn-outline-danger btn-sm" (click)="removeFriend(i)">
+          delete
+        </button>
+      </div>
+    </li>
+  </ul>
+</div>
+<div *ngIf="!friends">
+  <h2>Loading ...</h2>
+</div>

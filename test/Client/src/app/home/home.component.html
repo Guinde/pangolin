@@ -1,0 +1,13 @@
+<div class="container-home bg-light">
+  <app-friends [friends]="friends"></app-friends>
+  <app-profile
+    *ngIf="!editForm"
+    (openEditForm)="editFormToggle()"
+  ></app-profile>
+  <app-edit-profile
+    *ngIf="editForm"
+    [currentPangolin]="currentPangolin"
+    (closeEditForm)="editFormToggle()"
+  ></app-edit-profile>
+  <app-list-pangolins [pangolins]="pangolins"></app-list-pangolins>
+</div>

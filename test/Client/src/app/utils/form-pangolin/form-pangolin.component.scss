@@ -1,0 +1,16 @@
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.add {
+  height: 30px;
+  width: 90%;
+  font-size: 12px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.delete-nourriture {
+  cursor: pointer;
+}

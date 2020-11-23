@@ -1,4 +1,4 @@
-<div *ngIf="pangolins" class="container-list-pangolins">
+<div *ngIf="pangolins && !openForm" class="container-list-pangolins">
   <ul class="list-group">
     <li class="list-group-item active">List Pangolins</li>
     <li
@@ -21,7 +21,21 @@
     </li>
   </ul>
 </div>
-
+<div *ngIf="openForm">
+  <app-form-pangolin
+    (submit)="submit($event)"
+    [sizeForm]="'400px'"
+    [editForm]="false"
+  ></app-form-pangolin>
+</div>
+<button
+  *ngIf="!openForm"
+  type="button"
+  class="btn btn-primary"
+  (click)="addNewFriend()"
+>
+  Add New Friend
+</button>
 <div *ngIf="!pangolins">
   <h2>Loading ...</h2>
 </div>

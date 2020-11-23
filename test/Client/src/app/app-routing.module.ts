@@ -6,10 +6,10 @@ import { HomeComponent } from './home/home.component';
 import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
+  { path: '',   redirectTo: 'home', pathMatch: 'full' }, 
   { path: 'signin', component: SigninFormComponent},
   { path: 'signup', component: SignupFormComponent},
-  { path: 'home', canActivate: [AuthGuard], component: HomeComponent},
-  //{ path: '',   redirectTo: '/signin', pathMatch: 'full' }, 
+  { path: 'home', canActivate: [AuthGuard], component: HomeComponent}, 
 ];
 
 @NgModule({

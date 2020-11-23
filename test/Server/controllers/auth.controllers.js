@@ -6,9 +6,9 @@ const { createJwtToken } = require("../middlewares/jwt.middleware");
 exports.signup = async (req, res) => {
   try {
     const body = req.body;
-    await createPangolin(body);
+    const pangolin = await createPangolin(body);
     res.status(200).json({
-      data: "Pangolin created",
+      data: pangolin,
       error: null,
     });
   } catch (e) {
